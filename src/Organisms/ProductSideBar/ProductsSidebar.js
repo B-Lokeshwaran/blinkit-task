@@ -1,10 +1,10 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
-import './ProductSidebar.css'
+import styles from './ProductSidebar.module.scss'
 
 function ProductsSidebar({setValue}) {
   return (
-    <Accordion className="accordion-main-nav" defaultActiveKey="0">
+    <Accordion className={styles.accordion_main_nav} defaultActiveKey="0">
       <Accordion.Item eventKey="0">
         <Accordion.Header onClick={(e)=>setValue(e.target.textContent)}>All</Accordion.Header>
       </Accordion.Item>

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import { useSelector } from "react-redux";
-import "./CartCard.css";
+import styles from "./CartCard.module.scss";
 import CartHeading from "../../molecules/CartItem/CartItemHeading/CartItemHeading";
 import CartBilling from "../../molecules/CartItem/CartItemBilling/CartItemBilling";
 import CartSummary from "../../molecules/CartItem/CartItemSummary/CartItemSummary";
@@ -19,7 +19,7 @@ function CartCard() {
 
   return (
     <Container>
-      <div className="cart-card-main">
+      <div className={styles.cart_card_main}>
         <CartHeading />
 
         <CartItemCard />
