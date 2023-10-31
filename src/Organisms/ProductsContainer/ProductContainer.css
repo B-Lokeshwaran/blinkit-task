@@ -1,0 +1,7 @@
+.container-main-div{
+    width: 76%;
+    min-height: 650px;
+    margin-left: 170px;
+    border: 0.5px solid black;
+    display: flex;
+}

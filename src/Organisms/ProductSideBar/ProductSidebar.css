@@ -1,0 +1,8 @@
+.accordion-button::after{
+    width: none !important;
+    content: none !important;
+}
+
+.accordion-main-nav{
+    width: 230px;
+}
