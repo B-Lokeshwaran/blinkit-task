@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
-import "../../Assests/potato.png";
+import "../../assests/potato.png";
 import { useDispatch, useSelector } from "react-redux";
 import { add, remove } from "../../Store/cartSlice";
 import { setTrue, setFalse } from "../../Store/buttonStateSlice";

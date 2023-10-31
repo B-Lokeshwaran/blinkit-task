@@ -5,12 +5,12 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import BootstrapButton from "../../../atoms/button/Button";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setDecrement,
-  setIncrement,
-} from "../../../Store/buttonIncrementSlice";
-import { setFalse } from "../../../Store/buttonStateSlice";
-import { add, remove } from "../../../Store/cartSlice";
+// import {
+//   setDecrement,
+//   setIncrement,
+// } from "../../../Store/buttonIncrementSlice";
+// import { setFalse } from "../../../Store/buttonStateSlice";
+// import { add, remove } from "../../../Store/cartSlice";
 import { handleIncrement,handleDecrement } from "./CartItemhelper";
 import styles from './CartItemCard.module.scss'
 

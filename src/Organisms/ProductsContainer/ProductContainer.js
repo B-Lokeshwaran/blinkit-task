@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import ProductsSidebar from '../ProductSideBar/ProductsSidebar'
 import Productscards from '../ProductCard/Productscards'
-import Footer from '../Footer/Footer'
+// import Footer from '../Footer/Footer'
 import styles from './ProductContainer.module.scss'
 
 function ProductContainers() {

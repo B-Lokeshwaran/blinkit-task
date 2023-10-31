@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Form, FormControl } from "react-bootstrap";
-import ZZ from '../../../Assests/logo.svg'
+import ZZ from '../../../assests/logo.svg'
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import BootstrapButton from "../../../atoms/button/Button";
