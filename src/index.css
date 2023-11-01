@@ -17,3 +17,17 @@ code {
   width: none !important;
   content: none !important;
 }
+
+.btn-secondary {
+ 
+  --bs-btn-hover-color: green;
+  --bs-btn-hover-bg: none !important;
+  --bs-btn-hover-border-color: #146c43;
+  --bs-btn-focus-shadow-rgb: green;
+  
+}
+
+.card-body {
+  
+  padding-top: 10px;
+  }

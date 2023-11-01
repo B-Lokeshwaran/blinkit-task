@@ -30,19 +30,22 @@ function ProductItemCard({ele} ) {
         </div>
 
         <div className={styles.main_div}>
-          <div className={styles.main_sub_div}>{ele.newPrice}</div>
+          <div  >
+          <div>{ele.newPrice}</div>
+          <div className={styles.main_sub_div}>{ele.oldPrice}</div>
+          </div>
 
           {statevalue[ele.id] ? (
             <>
               <div className={styles.product_card_button}>
-                {/* <BootstrapButton variant="success" text="-" onClick={()=>handleDecrement(ele)} /> */}
+               
                 <BootstrapButton variant="success" text="-" onClick={()=>handleDecrement(ele, setCount,buttonvalue, dispatch, setIsAdding, statevalue, count)} />
                 <span className={styles.button_span}>{buttonvalue[ele.id]}</span>
                 <BootstrapButton variant="success" text="+" onClick={()=>handleIncrement(ele, count, setCount, dispatch, buttonvalue)} />
               </div>
             </>
           ) : (
-            <BootstrapButton variant="success" text="ADD" className={styles.card_button_1} onClick={()=>handleToggle(ele, isAdding, setIsAdding, setCount, count, dispatch)} />
+            <BootstrapButton variant="secondary" text="ADD" className={styles.card_button_1} onClick={()=>handleToggle(ele, isAdding, setIsAdding, setCount, count, dispatch)} />
           )}
         </div>
       </Card.Body>

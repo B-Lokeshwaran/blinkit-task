@@ -1,13 +1,33 @@
 .product_card{
-    height: 320px;
+    height: 300px;
     width: 230px;
-    /* margin-top: 10px; */
-    /* margin-bottom: 15px; */
+   
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgb(232, 232, 232);
+    box-shadow: rgba(0, 0, 0, 0.04) 2px 2px 8px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+ 
+  
 }
+
 
 .product_card_text{
   
-    margin-right: 150px;
+   
+    margin: 10px;
+    /* margin-right: 150px; */
+    background: rgb(83, 140, 238);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 11px;
+    width: 65px;
+    padding: 4px 5px;
+    
+    
 }
 
 .product_card_img{
@@ -19,15 +39,20 @@
 .product_card_text_1{
     margin-left: 100px;
     font-size: 10px;
+    color:rgb(49, 134, 22);
+    background: rgb(198, 241, 209);
+    
 }
 
 .product_card_title{
-    margin-right: 130px;
+    text-align: start;
+    
     font-size: 16px;
 }
 
 .product_card_text_2{
-    margin-right: 160px;
+    text-align: start;
+    
     font-size: 10px;
 }
 
@@ -36,11 +61,11 @@
 }
 
 .main_sub_div{
-    margin-top: 25px;
+    // margin-top: 25px;
 }
 
 .product_card_button{
-    margin-left: 80px;
+    margin-left: 90px;
     margin-top: 20px;
     background: green;
 }
@@ -51,7 +76,14 @@
 
 .card_button_1{
     width: 80px;
-    margin-left: 80px;
-    margin-top: 20px;
+    margin-left: 90px;
+    margin-top: 10px;
     margin-right: 10px;
+    border: 1px solid rgb(49, 134, 22);
+    background-color : rgb(247, 255, 249);
+    color: rgb(49, 134, 22);
 }
+
+// .product_card .product-card{
+// padding-top: 0px !important
+// }
