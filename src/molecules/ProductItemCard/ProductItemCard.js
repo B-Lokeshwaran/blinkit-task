@@ -16,7 +16,8 @@ function ProductItemCard({ele} ) {
   const buttonvalue = useSelector((state) => state.buttonIncrement);
   const statevalue = useSelector((state) => state.buttonState);
 
-
+  const value = useSelector((state) => state.cart)
+console.log(value,"redux state")
 
   return (
     <Card key={ele.id} className={styles.product_card}>
@@ -39,7 +40,12 @@ function ProductItemCard({ele} ) {
             <>
               <div className={styles.product_card_button}>
                
-                <BootstrapButton variant="success" text="-" onClick={()=>handleDecrement(ele, setCount,buttonvalue, dispatch, setIsAdding, statevalue, count)} />
+                <BootstrapButton variant="success" text="-" onClick={()=>handleDecrement(ele, 
+                  setCount,
+                  buttonvalue,
+                   dispatch, setIsAdding,
+                    statevalue, 
+                    count)} />
                 <span className={styles.button_span}>{buttonvalue[ele.id]}</span>
                 <BootstrapButton variant="success" text="+" onClick={()=>handleIncrement(ele, count, setCount, dispatch, buttonvalue)} />
               </div>
@@ -47,6 +53,8 @@ function ProductItemCard({ele} ) {
           ) : (
             <BootstrapButton variant="secondary" text="ADD" className={styles.card_button_1} onClick={()=>handleToggle(ele, isAdding, setIsAdding, setCount, count, dispatch)} />
           )}
+
+          {/* <BootstrapButton text="ADD" onClick={()=> handleToggle(ele, isAdding, setIsAdding, setCount, count, dispatch)}/> */}
         </div>
       </Card.Body>
     </Card>

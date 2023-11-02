@@ -19,7 +19,7 @@ function CartItemCard() {
   const statevalue = useSelector((state) => state.buttonState);
   console.log(statevalue, "statevalue");
 
-  // return (
+  return (
     <>
       <div className={styles.cart_main}>
         {cartdata.items.map((ele) => {
@@ -80,7 +80,9 @@ function CartItemCard() {
                                 variant="success"
                                 text="+"
                                 onClick={() =>
-                                  handleIncrement(dispatch, ele, buttonvalue)
+                                  handleIncrement(dispatch, ele,
+                                     buttonvalue
+                                     )
                                 }
                               />
                             </div>
@@ -96,7 +98,7 @@ function CartItemCard() {
         })}
       </div>
     </>
-  // );
+  );
 }
 
 export default CartItemCard;

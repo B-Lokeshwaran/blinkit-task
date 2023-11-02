@@ -19,8 +19,8 @@ const cartSlice = createSlice({
                 quantity: quantity,
                 count: state.count + 1,
                 price: state.price + parseInt(newPrice.split("$")[1]),
-                oldPrice: state.oldPrice + parseInt(oldPrice.split("$")[1])
-
+                oldPrice: state.oldPrice + parseInt(oldPrice.split("$")[1]),
+                
             }
         },
         remove(state, action){
@@ -35,7 +35,9 @@ const cartSlice = createSlice({
                     quantity: quantity,
                     count: state.count - 1,
                     price: state.price - parseFloat(newPrice.split("$")[1]),
-                    oldPrice: state.price - parseInt(oldPrice.split("$")[1])
+                    oldPrice: state.price - parseInt(oldPrice.split("$")[1]),
+                    
+                    
                 }
             }
             return {
@@ -45,10 +47,23 @@ const cartSlice = createSlice({
                 quantity: quantity,
                 count: state.count - 1,
                 price: state.price - parseFloat(newPrice.split("$")[1]),
-                oldPrice: state.price - parseInt(oldPrice.split("$")[1])
+                oldPrice: state.price - parseInt(oldPrice.split("$")[1]),
+                
             }
             
-        }
+        },
+    //    setTrue(state,action){
+    //     return {...state.productbuttonState , ...action.payload}
+    //    },
+    //    setFalse(state,action){
+    //      return {...state.productbuttonState, ...action.payload}
+    //    },
+    //    setIncrement(state,action){
+    //     return {...state.productbuttonIncrement , ...action.payload}
+    //    },
+    //    setDecrement(state, action){
+    //      return {...state.productbuttonIncrement , ...action.payload}
+    //    }
     }
 })
 

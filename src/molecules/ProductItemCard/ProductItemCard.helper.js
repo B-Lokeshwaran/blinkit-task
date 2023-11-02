@@ -1,9 +1,10 @@
 import { setDecrement, setIncrement } from "../../store/ButtonIncrementSlice";
 import { setTrue, setFalse } from "../../store/ButtonStateSlice";
-import { add, remove } from "../../store/CartSlice";
+import { add, remove,  } from "../../store/CartSlice";
 
 export const handleToggle = (ele, isAdding, setIsAdding, setCount, count, dispatch) =>{
     console.log("hello", { ...isAdding, [ele.id]: true })
+    console.log("state value", { ...isAdding, [ele.id]: true })
     // console.log("hello", ...isAdding)
     setIsAdding({ ...isAdding, [ele.id]: true });
     setCount({ ...count, [ele.id]: 1 });
@@ -37,7 +38,7 @@ export const handleDecrement = (ele, setCount,buttonvalue, dispatch, setIsAdding
     removetocart(ele,dispatch, { ...count, [ele.id]: count[ele.id] - 1 });
   };
 
-  export const addtoCart = (ele, dispatch, quantity) => {
+  export const addtoCart = (ele, dispatch, quantity, ) => {
     dispatch(add({ ...ele, quantity: quantity }));
   };
 
