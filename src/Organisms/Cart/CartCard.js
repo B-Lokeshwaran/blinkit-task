@@ -21,19 +21,15 @@ function CartCard() {
   return (
     <Container>
       <div className={styles.cart_card_main}>
-
         {cartdata.count === 0 ? (
-         <CartEmpty/>
-        ):(
+          <CartEmpty />
+        ) : (
           <>
-        <CartHeading />
-
-        <CartItemCard />
-
-        <CartBilling />
-
-        <CartSummary />
-        </>
+            <CartHeading />
+            <CartItemCard />
+            <CartBilling />
+            <CartSummary />
+          </>
         )}
       </div>
     </Container>
