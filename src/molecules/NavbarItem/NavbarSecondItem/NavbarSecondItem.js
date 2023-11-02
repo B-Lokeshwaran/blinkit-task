@@ -3,8 +3,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import NavbarSecondItemData from './NavbarSecondItemData';
-import styles from './NavbarSecondItem.module.scss';
+import NavbarSecondItemData from './navbarsecondItemdata';
+import styles from './navbarSecondItem.module.scss';
 
 
 function NavbarSecondItem() {

@@ -8,7 +8,7 @@ import ZZ from '../../../assests/logo.svg'
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import BootstrapButton from "../../../atoms/button/Button";
-import styles from './NavbarFirstItem.module.scss'
+import styles from './navbarFirstItem.module.scss'
 
 function NavbarFirstItem() {
     const cartValue = useSelector((state) => state.cart);

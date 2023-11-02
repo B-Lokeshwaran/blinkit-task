@@ -1,10 +1,10 @@
 import React from 'react'
 import CartCard from '../../organisms/Cart'
 
-function cartPage() {
+function CartPage() {
   return (
    <CartCard/>
   )
 }
 
-export default cartPage
+export default CartPage

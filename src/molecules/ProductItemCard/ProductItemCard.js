@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setDecrement, setIncrement } from "../../Store/buttonIncrementSlice";
-import { setTrue, setFalse } from "../../Store/buttonStateSlice";
-import { add, remove } from "../../Store/cartSlice";
+import { setDecrement, setIncrement } from "../../store/ButtonIncrementSlice";
+import { setTrue, setFalse } from "../../store/ButtonStateSlice";
+import { add, remove } from "../../store/CartSlice";
 import { Button, Card, Container } from "react-bootstrap";
 import BootstrapButton from "../../atoms/button/Button";
-import styles from './ProductItemCard.module.scss'
-import { handleIncrement, handleDecrement, addtoCart, removetocart, handleToggle } from './ProductItemCardhelper';
+import styles from './productItemCard.module.scss'
+import { handleIncrement, handleDecrement, addtoCart, removetocart, handleToggle } from './ProductItemCard.helper';
 
 function ProductItemCard({ele} ) {
     

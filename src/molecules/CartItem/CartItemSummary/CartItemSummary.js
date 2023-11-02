@@ -2,7 +2,7 @@ import React from 'react'
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useSelector, useDispatch } from "react-redux";
-import styles from './CartItemSummary.module.scss'
+import styles from './cartItemSummary.module.scss'
 
 function CartSummary() {
     const cartdata = useSelector((state) => state.cart);

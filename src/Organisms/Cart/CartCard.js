@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import { useSelector } from "react-redux";
-import styles from "./CartCard.module.scss";
-import CartHeading from "../../molecules/CartItem/CartItemHeading/CartItemHeading";
-import CartBilling from "../../molecules/CartItem/CartItemBilling/CartItemBilling";
-import CartSummary from "../../molecules/CartItem/CartItemSummary/CartItemSummary";
-import CartItemCard from "../../molecules/CartItem/CartItemCard/CartItemCard";
-import CartEmpty from "../../molecules/CartItem/CartEmpty/CartEmpty";
+import styles from "./cartcard.module.scss";
+import CartHeading from "../../molecules/cartItem/cartItemHeading/CartItemHeading";
+import CartBilling from "../../molecules/cartItem/cartItemBilling/CartItemBilling";
+import CartSummary from "../../molecules/cartItem/cartItemSummary/CartItemSummary";
+import CartItemCard from "../../molecules/cartItem/cartItemCard/CartItemCard";
+import CartEmpty from "../../molecules/cartItem/cartEmpty/CartEmpty";
 
 function CartCard() {
   const cartdata = useSelector((state) => state.cart);

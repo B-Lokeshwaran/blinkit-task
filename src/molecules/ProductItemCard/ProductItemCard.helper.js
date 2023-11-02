@@ -1,6 +1,6 @@
-import { setDecrement, setIncrement } from "../../Store/buttonIncrementSlice";
-import { setTrue, setFalse } from "../../Store/buttonStateSlice";
-import { add, remove } from "../../Store/cartSlice";
+import { setDecrement, setIncrement } from "../../store/ButtonIncrementSlice";
+import { setTrue, setFalse } from "../../store/ButtonStateSlice";
+import { add, remove } from "../../store/CartSlice";
 
 export const handleToggle = (ele, isAdding, setIsAdding, setCount, count, dispatch) =>{
     console.log("hello", { ...isAdding, [ele.id]: true })

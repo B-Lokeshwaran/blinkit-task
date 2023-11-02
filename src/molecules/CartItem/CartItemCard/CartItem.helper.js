@@ -1,9 +1,9 @@
 import {
   setDecrement,
   setIncrement,
-} from "../../../Store/buttonIncrementSlice";
-import { setFalse } from "../../../Store/buttonStateSlice";
-import { add, remove } from "../../../Store/cartSlice";
+} from "../../../store/ButtonIncrementSlice";
+import { setFalse } from "../../../store/ButtonStateSlice";
+import { add, remove } from "../../../store/CartSlice";
 
 export const handleIncrement = (dispatch, ele, buttonvalue) => {
   console.log({ hi: ele });

@@ -1,51 +1,35 @@
 import React, { useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import "../../assests/potato.png";
-import { useDispatch, useSelector } from "react-redux";
-import { add, remove } from "../../Store/cartSlice";
-import { setTrue, setFalse } from "../../Store/buttonStateSlice";
-import { setDecrement, setIncrement } from "../../Store/buttonIncrementSlice";
-import styles from "./Productscards.module.scss";
+
+import styles from "./productscards.module.scss";
 import BootstrapButton from "../../atoms/button/Button";
-import ProductItemCard from "../../molecules/ProductItemCard/ProductItemCard";
-import ProductcardData from "./ProductcardData";
+import ProductItemCard from "../../molecules/productItemCard/ProductItemCard";
+import productCardData from "./productcardData";
 
-
+const Product = React.memo(({ products }) => {
+  return products?.map((product) => (
+    <ProductItemCard key={product.id} ele={product} />
+  ));
+});
 
 function Productscards({ value }) {
- 
-  let Products;
-  if (value === "All") {
-    Products = ProductcardData.map((ele) => {
-      return <ProductItemCard ele={ele}/>;
-    });
-  } else if (value === "Fresh Vegetables") {
-    Products = ProductcardData
-      .filter((ele) => ele.category === value)
-      .map((ele) => {
-        return <ProductItemCard key={ele.id} ele={ele}/>;
-      });
-  } else if (value === "Fresh Fruits") {
-    Products = ProductcardData
-      .filter((ele) => ele.category === value)
-      .map((ele) => {
-        return <ProductItemCard ele={ele}/>;
-      });
-  } else if (value === "Seasonal") {
-    Products = ProductcardData
-      .filter((ele) => ele.category === value)
-      .map((ele) => {
-        return <ProductItemCard ele={ele}/>;
-      });
-  }
 
-  // return <Container className="d-flex flex-wrap container-wrap">{Products}</Container>;
-  return <div className={styles.top_div}>{value}<Container className={styles.container_wrap}>{Products}</Container></div>
+  const getProductsList = React.useCallback(() => {
+    if(value.id === 0) return productCardData
+    else return productCardData.filter((ele) => ele.categoryId === value.id)
+  }, [value.id])
 
-
-
-    
-  
+  return (
+    <div className={styles.top_div}>
+      {value.name}
+      <Container className={styles.container_wrap}>
+        <Product
+          products={getProductsList()}
+        />
+      </Container>
+    </div>
+  );
 }
 
-export default Productscards;
+export default React.memo(Productscards);

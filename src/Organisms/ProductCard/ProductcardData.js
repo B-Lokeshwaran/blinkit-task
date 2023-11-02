@@ -1,6 +1,7 @@
 const ProductcardData = [
     {
       id: 1,
+      categoryId : 1,
       category: "Fresh Vegetables",
       name: "Potato",
       weight: "1kg",
@@ -12,6 +13,7 @@ const ProductcardData = [
     },
     {
       id: 2,
+      categoryId : 1,
       category: "Fresh Vegetables",
       name: "Onion",
       weight: "1kg",
@@ -23,6 +25,7 @@ const ProductcardData = [
     },
     {
       id: 3,
+      categoryId : 1,
       category: "Fresh Vegetables",
       name: "Carrot",
       weight: "500g",
@@ -34,6 +37,7 @@ const ProductcardData = [
     },
     {
       id: 4,
+      categoryId : 1,
       category: "Fresh Vegetables",
       name: "Tomato",
       weight: "500g",
@@ -45,6 +49,7 @@ const ProductcardData = [
     },
     {
       id: 5,
+      categoryId : 2,
       category: "Fresh Fruits",
       name: "Apple",
       weight: "500g",
@@ -56,6 +61,7 @@ const ProductcardData = [
     },
     {
       id: 6,
+      categoryId : 2,
       category: "Fresh Fruits",
       name: "Graphes",
       weight: "500g",
@@ -67,6 +73,7 @@ const ProductcardData = [
     },
     {
       id: 7,
+      categoryId : 2,
       category: "Fresh Fruits",
       name: "Banana",
       weight: "500g",
@@ -79,6 +86,7 @@ const ProductcardData = [
   
     {
       id: 8,
+      categoryId : 2,
       category: "Fresh Fruits",
       name: "Orange",
       weight: "500g",
@@ -90,6 +98,7 @@ const ProductcardData = [
     },
     {
       id: 9,
+      categoryId : 3,
       category: "Seasonal",
       name: "Mango",
       weight: "500g",
@@ -101,6 +110,7 @@ const ProductcardData = [
     },
     {
       id: 10,
+      categoryId : 3,
       category: "Seasonal",
       name: "Pears   ",
       weight: "500g",
@@ -112,6 +122,7 @@ const ProductcardData = [
     },
     {
       id: 11,
+      categoryId : 3,
       category: "Seasonal",
       name: "Avacado",
       weight: "500g",
