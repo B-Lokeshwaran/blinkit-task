@@ -40,7 +40,7 @@ function Productscards({ value }) {
   }
 
   // return <Container className="d-flex flex-wrap container-wrap">{Products}</Container>;
-  return <Container className={styles.container_wrap}>{Products}</Container>;
+  return <div className={styles.top_div}>{value}<Container className={styles.container_wrap}>{Products}</Container></div>
 
 
 

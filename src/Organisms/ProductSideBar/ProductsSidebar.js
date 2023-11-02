@@ -12,62 +12,51 @@ function ProductsSidebar({setValue}) {
   
   return (
     
-    <Accordion className={styles.accordion_main_nav} defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header onClick={(e)=>setValue(e.target.textContent)}>All</Accordion.Header>
+    <Accordion  defaultActiveKey="0">
+      <Accordion.Item className={styles.accordion_main_nav} eventKey="0" >
+        <Accordion.Header onClick={(e)=>setValue(e.target.textContent)}><img className={styles.img_div} src="https://www.businessoutreach.in/wp-content/uploads/2022/12/success-story-of-Blinkit.png" /><span className={styles.sidebar_text}>All</span></Accordion.Header>
       </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Fresh Vegetables</Accordion.Header>
+      <Accordion.Item className={styles.accordion_main_nav} eventKey="1">
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://www.ceylonsupermart.com/cdn/shop/collections/bc3b04651f1f4b02717ff776a63e3a94.jpg?v=1655384810"/><span className={styles.sidebar_text}>Fresh Vegetables</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Fresh Fruits</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/images/products/sliding_image/321169a.jpg?ts=1692608540"/><span className={styles.sidebar_text}>Fresh Fruits</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="3">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Exotics</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/images/products/sliding_image/394525a.jpg?ts=1696330769"/><span className={styles.sidebar_text}>Exotics</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="4">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Seasonal</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://m.media-amazon.com/images/I/31cXlUcvRVL._AC_UF1000,1000_QL80_.jpg"/><span className={styles.sidebar_text}>Seasonal</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="5">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Organic & Hydroponic</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://m.media-amazon.com/images/I/81uwx8f8X4L._AC_UF1000,1000_QL80_.jpg"/><span className={styles.sidebar_text}>Organic & Hydroponic</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="6">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Fresh Juice</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/images/products/sliding_image/62221a.jpg?ts=1687265019"/><span className={styles.sidebar_text}>Fresh Juice</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="7">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Health Drinks</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=900/app/images/products/full_screen/pro_229795.jpg?ts=1686019334"/><span className={styles.sidebar_text}>Health Drinks</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="8">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Energy Drinks</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://media.istockphoto.com/id/458473367/photo/can-of-red-bull-energy-drink.jpg?s=612x612&w=0&k=20&c=8MngnfgpB3hdAnxzmQR6HGzY6ebt_agvFIhfdCXFAxM="/><span className={styles.sidebar_text}>Energy Drinks</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="9">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Nachos</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://cdn.grofers.com/app/images/products/full_screen/pro_440304.jpg?ts=1685982147"/><span className={styles.sidebar_text}>Nachos</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="10">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Popcorn</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://pbs.twimg.com/media/Fy1Uq3zagAE3kG9.jpg:large"/><span className={styles.sidebar_text}>Popcorn</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="11">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Noodles</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://cdn.grofers.com/app/images/products/full_screen/pro_476527.jpg?ts=1693480372"/><span className={styles.sidebar_text}>Noodles</span></Accordion.Header>
       </Accordion.Item>
 
       <Accordion.Item eventKey="12">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Pasta</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://m.media-amazon.com/images/I/718dnd7NJ1L._AC_SX148_SY213_QL70_.jpg"/><span className={styles.sidebar_text}>Pasta</span></Accordion.Header>
       </Accordion.Item>
       <Accordion.Item eventKey="13">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Cookies</Accordion.Header>
+        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}><img className={styles.img_div} src="https://store.blinkpetsbakery.com/cdn/shop/products/Apple_Cookies_large.jpg?v=1553252591"/><span className={styles.sidebar_text}>Cookies</span></Accordion.Header>
       </Accordion.Item>
-      <Accordion.Item eventKey="14">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Cakes & Rolls</Accordion.Header>
-      </Accordion.Item>
-      <Accordion.Item eventKey="14">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Cheese</Accordion.Header>
-      </Accordion.Item>
-      <Accordion.Item eventKey="14">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Vermicelli</Accordion.Header>
-      </Accordion.Item>
-      <Accordion.Item eventKey="14">
-        <Accordion.Header onClick={(e) => setValue(e.target.textContent)}>Milk Drinks</Accordion.Header>
-      </Accordion.Item>
+     
     </Accordion>
   );
 

@@ -30,8 +30,8 @@ function ProductItemCard({ele} ) {
         </div>
 
         <div className={styles.main_div}>
-          <div  >
-          <div>{ele.newPrice}</div>
+          <div className={styles.price_div} >
+          <div className={styles.main_div_price}>{ele.newPrice}</div>
           <div className={styles.main_sub_div}>{ele.oldPrice}</div>
           </div>
 

@@ -31,3 +31,16 @@ code {
   
   padding-top: 10px;
   }
+
+  .accordion {
+    
+    --bs-accordion-active-bg:  rgb(247, 255, 249); 
+    
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-left: 5px solid green;
+  
+}
+

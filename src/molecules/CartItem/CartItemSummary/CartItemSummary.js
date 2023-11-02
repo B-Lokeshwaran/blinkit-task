@@ -10,13 +10,16 @@ function CartSummary() {
     <>
      <div className={styles.col_main}>
           <Row>
-            <Col sm={8}>
-              <span className={styles.col_span}>
+            <Col className={styles.col_span} md={4}>
+              <span >
                 {" "}
-                {cartdata.count}Items {cartdata.price}
+                {cartdata.count}  Items 
+              </span>
+              <span className={styles.cart_price}>
+                {cartdata.price}
               </span>
             </Col>
-            <Col sm={4}>Proceed</Col>
+            <Col md={{span:4, offset:4}}>Proceed</Col>
           </Row>
         </div>
     

@@ -6,6 +6,7 @@ import CartHeading from "../../molecules/CartItem/CartItemHeading/CartItemHeadin
 import CartBilling from "../../molecules/CartItem/CartItemBilling/CartItemBilling";
 import CartSummary from "../../molecules/CartItem/CartItemSummary/CartItemSummary";
 import CartItemCard from "../../molecules/CartItem/CartItemCard/CartItemCard";
+import CartEmpty from "../../molecules/CartItem/CartEmpty/CartEmpty";
 
 function CartCard() {
   const cartdata = useSelector((state) => state.cart);
@@ -20,6 +21,11 @@ function CartCard() {
   return (
     <Container>
       <div className={styles.cart_card_main}>
+
+        {cartdata.count === 0 ? (
+         <CartEmpty/>
+        ):(
+          <>
         <CartHeading />
 
         <CartItemCard />
@@ -27,6 +33,8 @@ function CartCard() {
         <CartBilling />
 
         <CartSummary />
+        </>
+        )}
       </div>
     </Container>
   );
