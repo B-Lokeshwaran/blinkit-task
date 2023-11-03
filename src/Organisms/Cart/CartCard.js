@@ -12,12 +12,6 @@ function CartCard() {
   const cartdata = useSelector((state) => state.cart);
   console.log(cartdata, "values getting from redux");
 
-  // const buttonvalue = useSelector((state) => state.buttonIncrement);
-  // console.log(buttonvalue, "button values");
-
-  // const statevalue = useSelector((state) => state.buttonState);
-  // console.log(statevalue, "statevalue");
-
   return (
     <Container>
       <div className={styles.cart_card_main}>
@@ -34,7 +28,6 @@ function CartCard() {
       </div>
     </Container>
   );
-  // })}
 }
 
 export default CartCard;

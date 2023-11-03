@@ -11,19 +11,13 @@ import styles from "./cartItemCard.module.scss";
 function CartItemCard() {
   const dispatch = useDispatch();
   const cartdata = useSelector((state) => state.cart);
-  console.log(cartdata.count);
 
   const buttonvalue = useSelector((state) => state.buttonIncrement);
-  console.log(buttonvalue, "button values");
-
-  const statevalue = useSelector((state) => state.buttonState);
-  console.log(statevalue, "statevalue");
 
   return (
     <>
       <div className={styles.cart_main}>
         {cartdata.items.map((ele) => {
-          console.log(ele, "cart values after add or remove");
           return (
             <>
               <Card className={styles.Cart_card}>
@@ -64,12 +58,7 @@ function CartItemCard() {
                                 variant="success"
                                 text="-"
                                 onClick={() =>
-                                  handleDecrement(
-                                    dispatch,
-                                    ele,
-                                    buttonvalue,
-                                    statevalue
-                                  )
+                                  handleDecrement(dispatch, ele, buttonvalue)
                                 }
                               />
                               <span style={{ color: "white" }}>
@@ -80,9 +69,7 @@ function CartItemCard() {
                                 variant="success"
                                 text="+"
                                 onClick={() =>
-                                  handleIncrement(dispatch, ele,
-                                     buttonvalue
-                                     )
+                                  handleIncrement(dispatch, ele, buttonvalue)
                                 }
                               />
                             </div>

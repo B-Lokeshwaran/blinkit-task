@@ -26,13 +26,14 @@ const cartSlice = createSlice({
         return {
          
           items: tempItem,
-
+          quantity: quantity,
           count: state.count - 1,
           price: state.price - parseFloat(newPrice.split("$")[1]),
           oldPrice: state.price - parseInt(oldPrice.split("$")[1]),
         };
       }
       return {
+        quantity: quantity,
         items: state.items,
         count: state.count - 1,
         price: state.price - parseFloat(newPrice.split("$")[1]),
@@ -40,12 +41,12 @@ const cartSlice = createSlice({
       };
     },
 
-       setIncrement(state,action){
-        return {...state.productbuttonIncrement , ...action.payload}
-       },
-       setDecrement(state, action){
-         return {...state.productbuttonIncrement , ...action.payload}
-       }
+    //    setIncrement(state,action){
+    //     return {...state.productbuttonIncrement , ...action.payload}
+    //    },
+    //    setDecrement(state, action){
+    //      return {...state.productbuttonIncrement , ...action.payload}
+    //    }
   },
 });
 

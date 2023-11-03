@@ -17,18 +17,12 @@ function ProductContainers() {
 
 const[value, setValue]= useState(sidebardata[0])
   return (
-    <div className={styles.container_main_div}>
-
-      
-      <div>
+  <div className={styles.container_main_div}>
+    <div>
       <ProductsSidebar sidebardata={sidebardata}  setValue={setValue}/>
-      </div>
-       
-       <Productscards sidebardata={sidebardata} value={value}/>
-
-      
-       
     </div>
+       <Productscards sidebardata={sidebardata} value={value}/>
+  </div>
   )
 }
 

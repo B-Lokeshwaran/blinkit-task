@@ -4,8 +4,6 @@ import styles from "./cartItemHeading.module.scss";
 
 function CartHeading() {
   const cartdata = useSelector((state) => state.cart);
-
-  console.log(cartdata, "values getting from redux");
   return (
     <>
       <div className={styles.cart_heading}>
