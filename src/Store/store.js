@@ -6,7 +6,7 @@ import buttonIncrementSlice from "./ButtonIncrementSlice";
 const store = configureStore({
     reducer:{
         cart: cartSlice,
-        buttonState: buttonStateSlice,
+        // buttonState: buttonStateSlice,
         buttonIncrement: buttonIncrementSlice
     }
 })

@@ -11,13 +11,14 @@ import { handleIncrement, handleDecrement, addtoCart, removetocart, handleToggle
 function ProductItemCard({ele} ) {
     
   const [count, setCount] = useState({});
-  const [isAdding, setIsAdding] = useState({});
+  // const [isAdding, setIsAdding] = useState({});
   const dispatch = useDispatch();
   const buttonvalue = useSelector((state) => state.buttonIncrement);
   const statevalue = useSelector((state) => state.buttonState);
 
-  const value = useSelector((state) => state.cart)
-console.log(value,"redux state")
+  const value = useSelector((state) => state.cart).items.find((item)=> item.id === ele.id)
+
+
 
   return (
     <Card key={ele.id} className={styles.product_card}>
@@ -36,22 +37,22 @@ console.log(value,"redux state")
           <div className={styles.main_sub_div}>{ele.oldPrice}</div>
           </div>
 
-          {statevalue[ele.id] ? (
+          {value ? (
             <>
               <div className={styles.product_card_button}>
                
                 <BootstrapButton variant="success" text="-" onClick={()=>handleDecrement(ele, 
                   setCount,
                   buttonvalue,
-                   dispatch, setIsAdding,
-                    statevalue, 
+                   dispatch, 
+                    
                     count)} />
                 <span className={styles.button_span}>{buttonvalue[ele.id]}</span>
                 <BootstrapButton variant="success" text="+" onClick={()=>handleIncrement(ele, count, setCount, dispatch, buttonvalue)} />
               </div>
             </>
           ) : (
-            <BootstrapButton variant="secondary" text="ADD" className={styles.card_button_1} onClick={()=>handleToggle(ele, isAdding, setIsAdding, setCount, count, dispatch)} />
+            <BootstrapButton variant="secondary" text="ADD" className={styles.card_button_1} onClick={()=>handleToggle(ele, setCount, count, dispatch)} />
           )}
 
           {/* <BootstrapButton text="ADD" onClick={()=> handleToggle(ele, isAdding, setIsAdding, setCount, count, dispatch)}/> */}
