@@ -8,8 +8,11 @@ import {
   handleDecrement,
   handleToggle,
 } from "./ProductItemCard.helper";
+import PropTypes from "prop-types"
+
 
 function ProductItemCard({ productCard }) {
+ 
   const [count, setCount] = useState({});
   const dispatch = useDispatch();
 
@@ -87,3 +90,8 @@ function ProductItemCard({ productCard }) {
 }
 
 export default ProductItemCard;
+
+
+ProductItemCard.propTypes ={
+  productCard:  PropTypes.object
+}

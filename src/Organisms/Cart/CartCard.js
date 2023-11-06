@@ -10,7 +10,7 @@ import CartEmpty from "../../molecules/cartItem/cartEmpty/CartEmpty";
 
 function CartCard() {
   const cartdata = useSelector((state) => state.cart);
-  console.log(cartdata, "values getting from redux");
+ 
 
   return (
     <Container>

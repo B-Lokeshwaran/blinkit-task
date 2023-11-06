@@ -3,9 +3,12 @@ import { useSelector } from "react-redux";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import styles from "./cartItemBilling.module.scss";
+import { getMRP, getProductDiscount } from "./cartItemBilling.helper";
 
 function CartBilling() {
   const cartdata = useSelector((state) => state.cart);
+
+ 
   return (
     <>
       <div className={styles.card_div_1}>
@@ -17,7 +20,8 @@ function CartBilling() {
             className={styles.cart_billing_amount}
             md={{ span: 4, offset: 4 }}
           >
-            {cartdata.oldPrice}
+           
+            {getMRP(cartdata)}
           </Col>
         </Row>
         <Row>
@@ -28,7 +32,8 @@ function CartBilling() {
             md={{ span: 4, offset: 4 }}
             className={styles.cart_discount_amount}
           >
-            {cartdata.oldPrice - cartdata.price}
+          
+            {getProductDiscount(cartdata)}
           </Col>
         </Row>
         <Row>
@@ -50,7 +55,8 @@ function CartBilling() {
             md={{ span: 4, offset: 4 }}
             className={styles.cart_billing_amount}
           >
-            {cartdata.price}
+            
+            {getMRP(cartdata) - getProductDiscount(cartdata)}
           </Col>
         </Row>
         <Row xs="auto">

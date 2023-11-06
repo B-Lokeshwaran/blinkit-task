@@ -3,8 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   items: [],
   count: 0,
-  price: 0,
-  oldPrice: 0,
   productIncrement: {},
 };
 const cartSlice = createSlice({
@@ -12,7 +10,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     add(state, action) {
-      const { quantity, newPrice, oldPrice } = action.payload;
+      const { quantity} = action.payload;
 
       const tempItem = [...state?.items, action.payload];
       return {
@@ -21,21 +19,17 @@ const cartSlice = createSlice({
         }),
         quantity: quantity,
         count: state.count + 1,
-        price: state.price + parseInt(newPrice.split("$")[1]),
-        oldPrice: state.oldPrice + parseInt(oldPrice.split("$")[1]),
         productIncrement: state.productIncrement,
       };
     },
     remove(state, action) {
-      const { quantity, id, newPrice, oldPrice } = action.payload;
+      const { quantity, id } = action.payload;
       if (quantity[id] === 0) {
         const tempItem = state.items.filter((item) => item.id !== id);
         return {
           items: tempItem,
           quantity: quantity,
           count: state.count - 1,
-          price: state.price - parseFloat(newPrice.split("$")[1]),
-          oldPrice: state.price - parseInt(oldPrice.split("$")[1]),
           productIncrement: state.productIncrement,
         };
       }
@@ -43,8 +37,6 @@ const cartSlice = createSlice({
         quantity: quantity,
         items: state.items,
         count: state.count - 1,
-        price: state.price - parseFloat(newPrice.split("$")[1]),
-        oldPrice: state.price - parseInt(oldPrice.split("$")[1]),
         productIncrement: state.productIncrement,
       };
     },

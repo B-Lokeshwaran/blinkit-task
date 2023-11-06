@@ -7,9 +7,9 @@ import navbarSecondItemData from "./navbarsecondItemdata";
 import styles from "./navbarSecondItem.module.scss";
 
 const CustomNav = () => {
-  return navbarSecondItemData?.map((ele) => (
+  return navbarSecondItemData?.map((customnav) => (
     <Nav>
-      <div className={styles.div_nav}>{ele.name}</div>
+      <div className={styles.div_nav}>{customnav.name}</div>
     </Nav>
   ));
 };

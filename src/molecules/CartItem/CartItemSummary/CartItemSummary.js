@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useSelector, useDispatch } from "react-redux";
 import styles from './cartItemSummary.module.scss'
+import { getMRP, getProductDiscount } from '../cartItemBilling/cartItemBilling.helper';
 
 function CartSummary() {
     const cartdata = useSelector((state) => state.cart);
@@ -16,7 +17,8 @@ function CartSummary() {
                 {cartdata.count}  Items 
               </span>
               <span className={styles.cart_price}>
-                {cartdata.price}
+                {/* {cartdata.price} */}
+                {getMRP(cartdata) - getProductDiscount(cartdata)}
               </span>
             </Col>
             <Col md={{span:4, offset:4}}>Proceed</Col>
