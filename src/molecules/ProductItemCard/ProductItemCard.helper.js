@@ -1,5 +1,4 @@
-import { setDecrement, setIncrement } from "../../store/ButtonIncrementSlice";
-import { add, remove } from "../../store/CartSlice";
+import { add, remove ,setIncrement,setDecrement } from "../../store/cartSlice";
 
 export const handleToggle = (ele, setCount, count, dispatch) => {
   setCount({ ...count, [ele.id]: 1 });
@@ -12,21 +11,21 @@ export const handleIncrement = (
   count,
   setCount,
   dispatch,
-  buttonvalue
+  buttonIncrement
 ) => {
   setCount((prev) => ({
     ...prev,
     [ele.id]: (parseInt(prev[ele.id]) || 0) + 1,
   }));
 
-  dispatch(setIncrement({ ...buttonvalue, [ele.id]: buttonvalue[ele.id] + 1 }));
-  addtoCart(ele, dispatch, { ...count, [ele.id]: count[ele.id] + 1 });
+  dispatch(setIncrement({ ...buttonIncrement, [ele.id]: buttonIncrement[ele.id] + 1 }));
+  addtoCart(ele, dispatch, { ...buttonIncrement, [ele.id]: buttonIncrement[ele.id] + 1 });
 };
 
 export const handleDecrement = (
   ele,
   setCount,
-  buttonvalue,
+  buttonIncrement,
   dispatch,
   count
 ) => {
@@ -35,14 +34,15 @@ export const handleDecrement = (
     [ele.id]: prev[ele.id] - 1,
   }));
 
-  dispatch(setDecrement({ ...buttonvalue, [ele.id]: buttonvalue[ele.id] - 1 }));
-  removetocart(ele, dispatch, { ...count, [ele.id]: count[ele.id] - 1 });
+  dispatch(setDecrement({ ...buttonIncrement, [ele.id]: buttonIncrement[ele.id] - 1 }));
+  removetocart(ele, dispatch, { ...buttonIncrement, [ele.id]: buttonIncrement[ele.id] - 1 });
 };
 
-export const addtoCart = (ele, dispatch, quantity) => {
-  dispatch(add({ ...ele, quantity: quantity }));
+export const addtoCart = (ele, dispatch, quantity, ) => {
+  dispatch(add({ ...ele, quantity:quantity  }));
+ 
 };
 
 export const removetocart = (ele, dispatch, quantity) => {
-  dispatch(remove({ ...ele, quantity: quantity }));
+  dispatch(remove({ ...ele, quantity:quantity }));
 };

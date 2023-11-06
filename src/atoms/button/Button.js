@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import PropTypes from "prop-types"
 
 function BootstrapButton({variant,text, onClick, className,to}) {
   return (
@@ -12,4 +13,13 @@ function BootstrapButton({variant,text, onClick, className,to}) {
   )
 }
 
-export default BootstrapButton
+export default BootstrapButton;
+
+
+BootstrapButton.propTypes = {
+  variant: PropTypes.string,
+  text: PropTypes.string,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
+  to: PropTypes.string,
+}

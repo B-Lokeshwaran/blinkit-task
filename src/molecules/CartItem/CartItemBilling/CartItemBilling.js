@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import styles from "./cartItemBilling.module.scss";

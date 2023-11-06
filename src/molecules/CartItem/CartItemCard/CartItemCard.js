@@ -5,14 +5,14 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import BootstrapButton from "../../../atoms/button/Button";
 import { useSelector, useDispatch } from "react-redux";
-import { handleIncrement, handleDecrement } from "./CartItem.helper";
+import { handleIncrement, handleDecrement } from "./cartItem.helper";
 import styles from "./cartItemCard.module.scss";
 
 function CartItemCard() {
   const dispatch = useDispatch();
   const cartdata = useSelector((state) => state.cart);
 
-  const buttonvalue = useSelector((state) => state.buttonIncrement);
+  
 
   return (
     <>
@@ -58,18 +58,19 @@ function CartItemCard() {
                                 variant="success"
                                 text="-"
                                 onClick={() =>
-                                  handleDecrement(dispatch, ele, buttonvalue)
+                                  handleDecrement(dispatch, ele, cartdata.productIncrement)
                                 }
                               />
                               <span style={{ color: "white" }}>
-                                {buttonvalue[ele.id]}
+                               
+                                {cartdata.productIncrement[ele.id]}
                               </span>
 
                               <BootstrapButton
                                 variant="success"
                                 text="+"
                                 onClick={() =>
-                                  handleIncrement(dispatch, ele, buttonvalue)
+                                  handleIncrement(dispatch, ele, cartdata.productIncrement)
                                 }
                               />
                             </div>

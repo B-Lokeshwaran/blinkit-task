@@ -6,14 +6,14 @@ import footerCardData from "./footerCardData";
 import styles from "./footerCard.module.scss";
 
 function FooterCard() {
-  return footerCardData.map((ele) => (
+  return footerCardData.map((footercard) => (
     <Row md={3} className={styles.row_main}>
       <Col>
         <Card className={styles.footer_card}>
-          <Card.Img src={ele.img} className={styles.footer_card_image} />
+          <Card.Img src={footercard.img} className={styles.footer_card_image} />
           <Card.Body>
-            <Card.Title>{ele.title}</Card.Title>
-            <Card.Text>{ele.text}</Card.Text>
+            <Card.Title>{footercard.title}</Card.Title>
+            <Card.Text>{footercard.text}</Card.Text>
           </Card.Body>
         </Card>
       </Col>

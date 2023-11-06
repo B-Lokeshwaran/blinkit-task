@@ -1,22 +1,18 @@
-import {
-  setDecrement,
-  setIncrement,
-} from "../../../store/ButtonIncrementSlice";
-import { add, remove } from "../../../store/CartSlice";
+import { add, remove, setIncrement,setDecrement } from "../../../store/cartSlice";
 
-export const handleIncrement = (dispatch, ele, buttonvalue) => {
-  dispatch(setIncrement({ ...buttonvalue, [ele.id]: buttonvalue[ele.id] + 1 }));
+export const handleIncrement = (dispatch, ele, cartdata) => {
+  dispatch(setIncrement({ ...cartdata, [ele.id]: cartdata[ele.id] + 1 }));
   addtoCart(dispatch, ele, {
-    ...buttonvalue,
-    [ele.id]: buttonvalue[ele.id] + 1,
+    ...cartdata,
+    [ele.id]: cartdata[ele.id] + 1,
   });
 };
 
-export const handleDecrement = (dispatch, ele, buttonvalue, statevalue) => {
-  dispatch(setDecrement({ ...buttonvalue, [ele.id]: buttonvalue[ele.id] - 1 }));
+export const handleDecrement = (dispatch, ele, cartdata) => {
+  dispatch(setDecrement({ ...cartdata, [ele.id]: cartdata[ele.id] - 1 }));
   removetoCart(dispatch, ele, {
-    ...buttonvalue,
-    [ele.id]: buttonvalue[ele.id] - 1,
+    ...cartdata,
+    [ele.id]: cartdata[ele.id] - 1,
   });
 };
 
