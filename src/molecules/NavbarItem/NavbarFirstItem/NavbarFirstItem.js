@@ -9,9 +9,12 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import BootstrapButton from "../../../atoms/button/Button";
 import styles from "./navbarFirstItem.module.scss";
+import Searchbar from "../../../atoms/searchbar/Searchbar";
 
 function NavbarFirstItem() {
   const cartValue = useSelector((state) => state.cart);
+
+
   return (
     <>
       <Navbar expand="lg">
@@ -33,13 +36,8 @@ function NavbarFirstItem() {
             </Nav.Item>
           </Nav>
 
-          <Form className={styles.search_bar}>
-            <FormControl
-              type="text"
-              placeholder="Search"
-              className={styles.search_form}
-            />
-          </Form>
+         
+          <Searchbar className={styles.search_form } type="text" placeholder="search here" />
 
           <BootstrapButton
             variant="light"
