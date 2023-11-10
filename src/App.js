@@ -1,11 +1,11 @@
 import './App.css';
-import Navbar from './Organisms/Navbar/Navbar';
+import Navbar from './organisms/navbar/Navbar';
 import { Provider } from 'react-redux';
-import store from './Store/store';
+import store from './store/Store';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import CartCard from './Organisms/Cart/CartCard';
-import Footer from './Organisms/Footer/Footer';
-import ProductContainers from './Organisms/ProductsContainer/ProductContainer';
+import CartCard from './organisms/cart/CartCard';
+import Footer from './organisms/footer/Footer';
+import ProductListing from './pages/productListing';
 
 
 
@@ -20,10 +20,11 @@ function App() {
       <Navbar/>
      
         <Routes>
-        <Route path='/' element={<ProductContainers/>} />
+        <Route path='/' element={<ProductListing/>} />
         <Route path='/cart' element={<CartCard/>}/>
         </Routes>
       </Router>
+      
       <Footer/>
       </Provider>
       

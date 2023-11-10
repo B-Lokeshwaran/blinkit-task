@@ -1,4 +1,4 @@
-const NavbarSecondItemData = [
+const navbarSecondItemData = [
     { id: "1", name: "Vegetables & Fruites" },
     { id: "2", name: "Diary & Breakfast" },
     { id: "3", name: "Munchies" },
@@ -8,4 +8,4 @@ const NavbarSecondItemData = [
     { id: "7", name: "Bakery & Biscuits" },
   ];
 
-  export default NavbarSecondItemData
+  export default navbarSecondItemData

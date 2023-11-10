@@ -1,0 +1,105 @@
+.product_card{
+    height: 300px;
+    width: 230px;
+   
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgb(232, 232, 232);
+    box-shadow: rgba(0, 0, 0, 0.04) 2px 2px 8px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+ 
+  
+}
+
+
+.product_card_text{
+  
+   
+    margin: 10px;
+    /* margin-right: 150px; */
+    background: rgb(83, 140, 238);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 11px;
+    width: 65px;
+    padding: 4px 5px;
+    
+    
+}
+
+.product_card_img{
+    width: 100px;
+    height: 100px;
+    margin-left: 60px;
+}
+
+.product_card_text_1{
+    margin-left: 100px;
+    font-size: 10px;
+    color:rgb(49, 134, 22);
+    background: rgb(198, 241, 209);
+    
+}
+
+.product_card_title{
+    text-align: start;
+    
+    font-size: 16px;
+}
+
+.product_card_text_2{
+    text-align: start;
+    
+    font-size: 10px;
+    color: rgb(130, 130, 130);
+    
+}
+
+.main_div{
+    display: flex;
+}
+
+.main_sub_div{
+    // margin-top: 25px;
+    color: rgb(130, 130, 130);
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration-line: line-through;
+}
+
+.product_card_button{
+    margin-left: 80px;
+    margin-top: 10px;
+    background: green;
+    // width: 70px;
+}
+
+.button_span{
+    color: white;
+}
+
+.card_button_1{
+    width: 80px;
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid rgb(49, 134, 22);
+    background-color : rgb(247, 255, 249);
+    color: rgb(49, 134, 22);
+}
+
+// .product_card .product-card{
+// padding-top: 0px !important
+// }
+
+.main_div_price{
+    color: rgb(31, 31, 31);
+    font-weight: 600;
+    font-size: 12px;
+}
+.price_div{
+    margin-top: 10px;
+}

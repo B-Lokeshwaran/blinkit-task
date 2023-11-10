@@ -5,14 +5,54 @@
 
 .card_main_1{
     display: flex;
+    box-shadow: none;
+    border: none;
 }
 
 .card_image{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
 }
 
 .card_div{
     margin-right: 20px;
     background: green;
 }
+
+.cart_name{
+
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: start;
+
+}
+
+.cart_size{
+
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgb(130, 130, 130);
+    text-align: start;
+}
+
+.cart_price{
+    text-align: start;
+    margin-top: 10px;
+}
+
+.cart_newprice{
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.cart_oldprice{
+    font-size: 14px;
+    color: rgb(130, 130, 130);
+    text-decoration-line: line-through;
+}
+
+.Cart_card{
+    border: none;
+}
+

@@ -1,87 +1,88 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setDecrement, setIncrement } from "../../Store/buttonIncrementSlice";
-import { setTrue, setFalse } from "../../Store/buttonStateSlice";
-import { add, remove } from "../../Store/cartSlice";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Button, Card, Container } from "react-bootstrap";
 import BootstrapButton from "../../atoms/button/Button";
+import styles from "./productItemCard.module.scss";
+import {
+  handleIncrement,
+  handleDecrement,
+  handleToggle,
+} from "./ProductItemCard.helper";
+import PropTypes from "prop-types"
 
 
-
-function ProductItemCard({ele} ) {
-    
+function ProductItemCard({ productCard }) {
+ 
   const [count, setCount] = useState({});
-  const [isAdding, setIsAdding] = useState({});
   const dispatch = useDispatch();
-  const buttonvalue = useSelector((state) => state.buttonIncrement);
-  const statevalue = useSelector((state) => state.buttonState);
 
-  const handleToggle = () => {
-    setIsAdding({ ...isAdding, [ele.id]: true });
-    setCount({ ...count, [ele.id]: 1 });
-    dispatch(setTrue({ ...isAdding, [ele.id]: true }));
-    dispatch(setIncrement({ ...count, [ele.id]: 1 }));
-    addtoCart(ele, { ...count, [ele.id]: 1 });
-  };
 
-  const handleIncrement = () => {
-    setCount((prev) => ({
-      ...prev,
-      [ele.id]: (parseInt(prev[ele.id]) || 0) + 1,
-    }));
+  const buttonIncrement = useSelector((state) => state.cart)
+  
 
-    dispatch(setIncrement({ ...buttonvalue, [ele.id]: buttonvalue[ele.id] + 1 }))
-    addtoCart(ele, { ...count, [ele.id]: count[ele.id] + 1 });
-  };
-
-  const handleDecrement = () => {
-    setCount((prev) => ({
-      ...prev,
-      [ele.id]: prev[ele.id] - 1,
-    }));
-
-    dispatch(setDecrement({ ...buttonvalue, [ele.id]: buttonvalue[ele.id] - 1 }));
-    if (buttonvalue[ele.id] === 1) {
-      setIsAdding({ ...buttonvalue, [ele.id]: false });
-      dispatch(setFalse({ ...statevalue, [ele.id]: false }));
-    }
-
-    removetocart(ele, { ...count, [ele.id]: count[ele.id] - 1 });
-  };
-
-  const addtoCart = (ele, quantity) => {
-    dispatch(add({ ...ele, quantity: quantity }));
-  };
-
-  const removetocart = (ele, quantity) => {
-    dispatch(remove({ ...ele, quantity: quantity }));
-  };
+  const productButtonState = useSelector((state) => state.cart).items.find(
+    (item) => item.id === productCard.id
+  );
 
   return (
-    <Card key={ele.id} className="product-card">
-      <Card.Text className="product-card-text">{ele.offer}</Card.Text>
-      <Card.Img src={ele.img} className="product-card-img" />
+    <Card key={productCard.id} className={styles.product_card}>
+      <Card.Text className={styles.product_card_text}>{productCard.offer}</Card.Text>
+      <Card.Img src={productCard.img} className={styles.product_card_img} />
       <Card.Body>
-        <Card.Text className="product-card-text-1">{ele.time}</Card.Text>
+        <Card.Text className={styles.product_card_text_1}>{productCard.time}</Card.Text>
         <div>
-          <Card.Title className="product-card-title">{ele.name}</Card.Title>
-          <Card.Text className="product-card-text-2">{ele.weight}</Card.Text>
+          <Card.Title className={styles.product_card_title}>
+            {productCard.name}
+          </Card.Title>
+          <Card.Text className={styles.product_card_text_2}>
+            {productCard.weight}
+          </Card.Text>
         </div>
 
-        <div className="main-div">
-          <div className="main-sub-div">{ele.newPrice}</div>
+        <div className={styles.main_div}>
+          <div className={styles.price_div}>
+            <div className={styles.main_div_price}>{productCard.newPrice}</div>
+            <div className={styles.main_sub_div}>{productCard.oldPrice}</div>
+          </div>
 
-          {statevalue[ele.id] ? (
+          {productButtonState ? (
             <>
-              <div className="product-card-button">
-                <BootstrapButton variant="success" text="-" onClick={()=>handleDecrement(ele)} />
-                <span className="button-span">{buttonvalue[ele.id]}</span>
-                <BootstrapButton variant="success" text="+" onClick={()=>handleIncrement(ele)} />
+              <div className={styles.product_card_button}>
+                <BootstrapButton
+                  variant="success"
+                  text="-"
+                  onClick={() =>
+                    handleDecrement(
+                      productCard,
+                      setCount,
+                      buttonIncrement.productIncrement,
+                      dispatch,
+                      count
+                    )
+                  }
+                />
+                <span className={styles.button_span}>
+                  
+                  {buttonIncrement.productIncrement[productCard.id]}
+                </span>
+                <BootstrapButton
+                  variant="success"
+                  text="+"
+                  onClick={() =>
+                    handleIncrement(productCard, count, setCount, dispatch,buttonIncrement.productIncrement)
+                  }
+                />
               </div>
             </>
           ) : (
-            <BootstrapButton variant="success" text="ADD" className="card-button-1" onClick={()=>handleToggle(ele)} />
+            <BootstrapButton
+              variant="secondary"
+              text="ADD"
+              className={styles.card_button_1}
+              onClick={() => handleToggle(productCard, setCount, count, dispatch, buttonIncrement.productIncrement)}
+            />
           )}
+
         </div>
       </Card.Body>
     </Card>
@@ -89,3 +90,8 @@ function ProductItemCard({ele} ) {
 }
 
 export default ProductItemCard;
+
+
+ProductItemCard.propTypes ={
+  productCard:  PropTypes.object
+}
